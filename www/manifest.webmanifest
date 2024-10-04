@@ -1,0 +1,19 @@
+{
+    "short_name": "Light",
+    "name": "Light Controller",
+    "icons": [
+      {
+        "src": "/img/off.png",
+        "type": "image/png",
+        "sizes": "72x72"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#ffffff",
+    "shortcuts": [
+    ]
+  }
+  

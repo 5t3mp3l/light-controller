@@ -1,0 +1,140 @@
+{
+    "config": {
+        "use_https": false,
+        "use_auth": true,
+        "use_alerts": true,
+        "use_openhab": false,
+        "use_ifttt": false,
+        "allow_api": false,
+        "api_key": "<static key here>"
+    },
+    "alerts": {
+        "time_to_wait": 10,
+        "alert_type": null,
+        "smtp": {
+            "smtphost": "<SMTP HOST>",
+            "smtpport": 587,
+            "smtp_tls": "True",
+            "username": "<USERNAME EMAIL ADDRESS>",
+            "password": "<PASSWORD>",
+            "to_email": "<TO EMAIL ADDRESS>",
+            "subject": "<EMAIL SUBJECT>"
+        },
+        "pushbullet": {
+            "access_token": "<ACCESS TOKEN>"
+        },
+        "pushover": {
+            "user_key": "<PUSHOVER USER KEY>",
+            "api_key": "<PUSHOVER API TOKEN/KEY>"
+        },
+        "telegram": {
+            "chat_id": "<CHAT_ID>",
+            "api_token": "<API_TOKEN>"
+        }
+    },
+    "openhab": {
+        "server": "",
+        "port": ""
+    },
+    "ifttt": {
+        "key": "<IFTTT MAKER KEY>"
+    },
+    "site": {
+        "port": 8081,
+        "port_secure": 8444,
+        "username": "user",
+        "password": "12345",
+        "ssl_key": "/home/$USER/light-controller-cert/localhost.key",
+        "ssl_cert": "/home/$USER/light-controller-cert/localhost.crt"
+    },
+    "lights": {
+        "light_1": {
+            "name": "Gang",
+            "relay_pin": 23,
+            "state_pin": 27,
+            "state_pin_closed_value": 0,
+            "approx_time_to_close":0,
+            "approx_time_to_open":0,
+            "openhab_name": "g_light_1",
+            "ifttt_event_open": "g_light_1_on",
+            "ifttt_event_close": "g_light_1_off"
+        },
+        "light_2": {
+            "name": "Toilette",
+            "relay_pin": 23,
+            "state_pin": 27,
+            "state_pin_closed_value": 0,
+            "approx_time_to_close":0,
+            "approx_time_to_open":0,
+            "openhab_name": "g_light_2",
+            "ifttt_event_open": "g_light_2_on",
+            "ifttt_event_close": "g_light_2_off"
+        },
+        "light_3": {
+            "name": "Schlafzimmer",
+            "relay_pin": 23,
+            "state_pin": 27,
+            "state_pin_closed_value": 0,
+            "approx_time_to_close":0,
+            "approx_time_to_open":0,
+            "openhab_name": "g_light_3",
+            "ifttt_event_open": "g_light_3_on",
+            "ifttt_event_close": "g_light_3_off"
+        },
+        "light_4": {
+            "name": "Badezimmer",
+            "relay_pin": 23,
+            "state_pin": 27,
+            "state_pin_closed_value": 0,
+            "approx_time_to_close":0,
+            "approx_time_to_open":0,
+            "openhab_name": "g_light_4",
+            "ifttt_event_open": "g_light_4_on",
+            "ifttt_event_close": "g_light_4_off"
+        },
+        "light_5": {
+            "name": "Wohnzimmer Decke",
+            "relay_pin": 23,
+            "state_pin": 27,
+            "state_pin_closed_value": 0,
+            "approx_time_to_close":0,
+            "approx_time_to_open":0,
+            "openhab_name": "g_light_5",
+            "ifttt_event_open": "g_light_5_on",
+            "ifttt_event_close": "g_light_5_off"
+        },
+        "light_6": {
+            "name": "Wohnzimmer Sideboard",
+            "relay_pin": 23,
+            "state_pin": 27,
+            "state_pin_closed_value": 0,
+            "approx_time_to_close":0,
+            "approx_time_to_open":0,
+            "openhab_name": "g_light_6",
+            "ifttt_event_open": "g_light_6_on",
+            "ifttt_event_close": "g_light_6_off"
+        },
+        "light_7": {
+            "name": "Balkon",
+            "relay_pin": 23,
+            "state_pin": 27,
+            "state_pin_closed_value": 0,
+            "approx_time_to_close":0,
+            "approx_time_to_open":0,
+            "openhab_name": "g_light_7",
+            "ifttt_event_open": "g_light_7_on",
+            "ifttt_event_close": "g_light_7_off"
+        },
+        "light_8": {
+            "name": "Küche",
+            "relay_pin": 23,
+            "state_pin": 27,
+            "state_pin_closed_value": 0,
+            "approx_time_to_close":0,
+            "approx_time_to_open":0,
+            "openhab_name": "g_light_8",
+            "ifttt_event_open": "g_light_8_on",
+            "ifttt_event_close": "g_light_8_off"
+        }
+    }
+}

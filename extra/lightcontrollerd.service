@@ -1,0 +1,12 @@
+[Unit]
+Description=Light controller software written in Python for use on the Raspberry Pi.
+After=multi-user.target
+ 
+[Service]
+Type=simple
+WorkingDirectory=/home/$USER/light-controller
+ExecStart=/usr/bin/python3 /home/$USER/light-controller/controller.py
+Restart=on-abort
+ 
+[Install]
+WantedBy=multi-user.target
