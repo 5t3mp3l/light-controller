@@ -7,6 +7,8 @@ import json
 import python_http_client
 import urllib
 import subprocess
+from twisted.python import log
+
 
 from twisted.internet import task
 from twisted.internet import reactor
@@ -337,11 +339,11 @@ class Controller(object):
         site = server.Site(root)
 
         if not self.get_config_with_default(self.config['config'], 'use_https', False):
-            reactor.listenTCP(self.config['site']['port'], site)  # @UndefinedVariable
+            reactor.listenTCP(self.config['site']['port'], site, interface='0.0.0.0')  # @UndefinedVariable
             reactor.run()  # @UndefinedVariable
         else:
             sslContext = ssl.DefaultOpenSSLContextFactory(self.config['site']['ssl_key'], self.config['site']['ssl_cert'])
-            reactor.listenSSL(self.config['site']['port_secure'], site, sslContext)  # @UndefinedVariable
+            reactor.listenSSL(self.config['site']['port_secure'], site, sslContext, interface='0.0.0.0')  # @UndefinedVariable
             reactor.run()  # @UndefinedVariable
 
 class ClickHandler(Resource):
@@ -393,8 +395,8 @@ class APIHandler(Resource):
                         if state == "off":
                             self.controller.toggle(LightId)
                         return 'OK'
-                    elif command == "on":
-                        if state == "off":
+                    elif command == "off":
+                        if state == "on":
                             self.controller.toggle(LightId)
                         return 'OK'
                     else:
@@ -533,6 +535,7 @@ def elapsed_time(seconds, suffixes=['y','w','d','h','m','s'], add_s=False, separ
     return separator.join(time)
 
 if __name__ == '__main__':
+    log.startLogging(sys.stdout)
     syslog.openlog('light_controller')
     config_file = open('config.json')
     controller = Controller(json.load(config_file))

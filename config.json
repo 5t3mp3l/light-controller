@@ -10,7 +10,7 @@
     },
     "alerts": {
         "time_to_wait": 10,
-        "alert_type": null,
+        "alert_type": "smtp,pushbullet",
         "smtp": {
             "smtphost": "<SMTP HOST>",
             "smtpport": 587,
@@ -50,8 +50,8 @@
     "lights": {
         "light_1": {
             "name": "Gang",
-            "relay_pin": 23,
-            "state_pin": 27,
+            "relay_pin": 13,
+            "state_pin": 4,
             "state_pin_closed_value": 0,
             "approx_time_to_close":0,
             "approx_time_to_open":0,
@@ -61,8 +61,8 @@
         },
         "light_2": {
             "name": "Toilette",
-            "relay_pin": 23,
-            "state_pin": 27,
+            "relay_pin": 35,
+            "state_pin": 17,
             "state_pin_closed_value": 0,
             "approx_time_to_close":0,
             "approx_time_to_open":0,
@@ -72,7 +72,7 @@
         },
         "light_3": {
             "name": "Schlafzimmer",
-            "relay_pin": 23,
+            "relay_pin": 37,
             "state_pin": 27,
             "state_pin_closed_value": 0,
             "approx_time_to_close":0,
@@ -83,8 +83,8 @@
         },
         "light_4": {
             "name": "Badezimmer",
-            "relay_pin": 23,
-            "state_pin": 27,
+            "relay_pin": 12,
+            "state_pin": 5,
             "state_pin_closed_value": 0,
             "approx_time_to_close":0,
             "approx_time_to_open":0,
@@ -95,7 +95,7 @@
         "light_5": {
             "name": "Wohnzimmer Decke",
             "relay_pin": 23,
-            "state_pin": 27,
+            "state_pin": 6,
             "state_pin_closed_value": 0,
             "approx_time_to_close":0,
             "approx_time_to_open":0,
@@ -105,7 +105,7 @@
         },
         "light_6": {
             "name": "Wohnzimmer Sideboard",
-            "relay_pin": 23,
+            "relay_pin": 24,
             "state_pin": 27,
             "state_pin_closed_value": 0,
             "approx_time_to_close":0,
@@ -116,8 +116,8 @@
         },
         "light_7": {
             "name": "Balkon",
-            "relay_pin": 23,
-            "state_pin": 27,
+            "relay_pin": 25,
+            "state_pin": 16,
             "state_pin_closed_value": 0,
             "approx_time_to_close":0,
             "approx_time_to_open":0,
@@ -127,8 +127,8 @@
         },
         "light_8": {
             "name": "Küche",
-            "relay_pin": 23,
-            "state_pin": 27,
+            "relay_pin": 18,
+            "state_pin": 20,
             "state_pin_closed_value": 0,
             "approx_time_to_close":0,
             "approx_time_to_open":0,
